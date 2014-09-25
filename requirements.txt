@@ -1,0 +1,7 @@
+Django==1.6.5
+psycopg2==2.5.4
+django_behave==0.1.2
+should-dsl==2.1.2
+South==1.0
+coverage==3.7.1
+selenium==2.43.0
