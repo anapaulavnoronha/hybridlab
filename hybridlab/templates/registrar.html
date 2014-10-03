@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 
 {% block 'content' %}
-
 <style>
       body {
         padding-top: 200px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
- <div class="container">
-
+<div class='container'>
 	<form method="POST">
 	    {% csrf_token %}
 	    {{ form.as_p }}
 	    <button type='submit' class="btn btn-primary">
-	    	Logar
+	    	Registrar
 	    </button>
 	</form>
 </div>

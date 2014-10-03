@@ -1,7 +1,43 @@
-from django.shortcuts import render_to_response
-from django.template import RequestContext
-
 # Create your views here.
+from django.shortcuts import render_to_response, render
+from django.http import HttpResponseRedirect # Funcao para redirecionar o usuario
+from django.contrib.auth.forms import UserCreationForm # Formulario de criacao de usuarios
+from django.contrib.auth.forms import AuthenticationForm # Formulario de autenticacao de usuarios
+from django.contrib.auth import login as auth_login # funcao que salva o usuario na sessao
 
-def login(request):
-	return render_to_response('login.html', context_instance=RequestContext(request))
+
+# pagina inicial do projeto django-wars
+
+
+# pagina de cadastro de jogador
+def registrar(request):
+    # Se dados forem passados via POST
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        
+        if form.is_valid(): # se o formulario for valido
+            form.save() # cria um novo usuario a partir dos dados enviados 
+            return HttpResponseRedirect("/login/") # redireciona para a tela de login
+        else:
+            # mostra novamente o formulario de cadastro com os erros do formulario atual
+            return render(request, "registrar.html", {"form": form})
+    
+    # se nenhuma informacao for passada, exibe a pagina de cadastro com o formulario
+    return render(request, "registrar.html", {"form": UserCreationForm() })
+
+
+# pagina de login do jogador
+def logar(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST) # Veja a documentacao desta funcao
+        
+        if form.is_valid():
+            #se o formulario for valido significa que o Django conseguiu encontrar o usuario no banco de dados
+            #agora, basta logar o usuario e ser feliz.
+            auth_login(request, form.get_user())
+            return HttpResponseRedirect("/") # redireciona o usuario logado para a pagina inicial
+        else:
+            return render(request, "login.html", {"form": form})
+    
+    #se nenhuma informacao for passada, exibe a pagina de login com o formulario
+    return render(request, "login.html", {"form": AuthenticationForm()})
