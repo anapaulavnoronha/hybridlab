@@ -1,2 +1,26 @@
 {% extends 'base.html' %}
 
+{% block 'content' %}
+
+    	<!-- About Section -->
+	    <section class="primary" id="about">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-lg-12 text-center">
+	                	<br></br>
+	                	<br></br>
+	                    <h2>LOGIN</h2>
+	                    <p></p>
+	                    <form action="/login/entrar/" method="post">
+						<input class="text-info" id="username" type="text" name="username" placeholder="Usuário">
+						<p></p>
+						<input class="text-info" id="password" type="password" name="password" placeholder="Senha">
+						<br></br>
+						<button href="#" class="btn btn-large btn-primary" type="submit" class="btn">Sign in</button>						            
+					</div>
+			   </div>
+			</div>
+	    </section>
+
+{% endblock %}
+
