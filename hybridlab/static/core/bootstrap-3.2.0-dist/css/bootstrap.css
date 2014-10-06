@@ -14,6 +14,10 @@ html {
 body {
   margin: 0;
 }
+.text-justify {
+  text-align: justify;
+}
+
 article,
 aside,
 details,
@@ -872,6 +876,13 @@ th {
 .glyphicon-tree-deciduous:before {
   content: "\e200";
 }
+.im-centered { 
+  margin: auto; max-width: 300px;
+}
+.text-justify {
+  text-align: justify;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

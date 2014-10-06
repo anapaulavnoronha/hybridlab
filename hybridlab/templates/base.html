@@ -22,6 +22,8 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,16 +56,7 @@
                         <a href="/"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">Simulação</a>
-                    </li>
-                    <li class="page-scroll">
                         <a href="#contact">Histórico de Resultados</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/login">Login</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a href="/registrar">Registrar</a>
                     </li>
                 </ul>
             </div>
@@ -73,6 +66,58 @@
     </nav>
 
     {% block 'content' %}{% endblock %}
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h5>Localização da Bancada</h5>
+                        Universidade de Brasília - DF/ Campus Gama - FGA <br> Laboratório de Engenharia Automotiva (Galpão)
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h5>Links Relacionados</h5>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_fga.png"%}" alt="" height="30" width="50">
+                                </a>
+                            </li>
+                            <li>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline">
+                                <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_unb.png"%}" alt="" height="30" width="50">
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h5>About Freelancer</h5>
+                        Freelance is a free to use, open source Bootstrap theme created by
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Your Website 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
 
     {% load staticfiles %}
         <!-- jQuery Version 1.11.0 -->
@@ -95,3 +140,4 @@
 
 </body>
 </html>
+
