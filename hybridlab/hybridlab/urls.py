@@ -6,6 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'core.views.home', name='home'),
+    url(r'^historico/$', 'core.views.history', name='history'),
     url(r'^registrar/$', 'login.views.registrar', name='registrar'),
     url(r'^login/$', 'login.views.logar', name='logar'),
     # url(r'^$', 'hybridlab.views.home', name='home'),

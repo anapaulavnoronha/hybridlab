@@ -38,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'core',
     'login',
+    'chartit',
+    'chart',
 )
 
 MIDDLEWARE_CLASSES = (
