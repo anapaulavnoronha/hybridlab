@@ -7,11 +7,14 @@
       }
     </style>
 
-    <ul>
-  {% for simulation in object_list %}
-    <table class="table table-bordered">{{ simulation }}</table>
-  {% endfor %}
-</ul>
-
+  
+    <table class="table table-striped">
+    	<tr>
+    		<th>Data/Hora da Simulação</th>
+    	</tr>
+	  		{% for simulation in object_list %}	
+	    	<tr><td>{{ simulation }}</td></tr>
+	    	{% endfor %}
+    </table>
 
 {% endblock %}
