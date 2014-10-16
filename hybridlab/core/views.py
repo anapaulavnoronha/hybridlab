@@ -5,7 +5,3 @@ from django.template import RequestContext
 
 def home(request):
 	return render_to_response('index.html', context_instance=RequestContext(request))
-
-
-def history(request):
-	return render_to_response('historico.html', context_instance=RequestContext(request))

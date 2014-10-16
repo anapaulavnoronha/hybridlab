@@ -7,5 +7,11 @@
       }
     </style>
 
+    <ul>
+  {% for simulation in object_list %}
+    <table class="table table-bordered">{{ simulation }}</table>
+  {% endfor %}
+</ul>
+
 
 {% endblock %}
