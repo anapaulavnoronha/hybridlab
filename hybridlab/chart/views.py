@@ -37,7 +37,7 @@ def resultados(request, SimuId):
               {'title': {
               	'text': 'Dados da Tensao da Simulacao Realizada'},
                 'colors': ['#3AA6D0'],
-                'chart': {'backgroundColor': '#FFFFFF'},
+                'chart': {'backgroundColor': '#DAEEF2'},
                'xAxis': {
                     'title': {
                        'text': 'Time'}}})
@@ -65,7 +65,7 @@ def resultados(request, SimuId):
               {'title': {
                 'text': 'Dados do Consumo da Simulacao Realizada'},
                 'colors': ['#3AA6D0'],
-                'chart': {'backgroundColor': '#FFFFFF'},
+                'chart': {'backgroundColor': '#DAEEF2'},
                'xAxis': {
                     'title': {
                        'text': 'Time'}}})

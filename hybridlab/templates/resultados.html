@@ -4,18 +4,35 @@
 {% block 'content' %}
 	<style>
       body {
-        padding-top: 200px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 50px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
 
-    <h1>Simulacao {{simulation.id}}</h1>
+<section class="primary">
+
+	<center><table width="75%" border="0">
+    	
+    	<tr>
+    		<td colspan=7><center><h2>Simulacao {{simulation.id}}</h2></center><hr class="star-primary"></td>
+ 		</tr>
+
+ 		<tr>
+       		<td align="center"><h3>Data:</h3><h4>{{simulation}}</h4><td>
+       		<td align="center"><h3>Angulacao:</h3><h4> 50 graus</h4><td>
+       		<td align="center"><h3>Velocidade:</h3><h4> 50 graus</h4><td>
+       		<td align="center"><h3>Potencia(%):</h3><h4> 50 graus</h4><td>
+        </tr>
+
+    </table></center><br><br>
+
+		{% load chartit %}
+		{{ resultados|load_charts:"cht, chtT"}}
+		 <div class="center-block" style="width:900px; height:400px;" id="cht">tensao</div>
+		 <br>
+		<div class="center-block" style="width:900px; height:400px;"id="chtT">consumo</div>
 
 
 
-    {% load chartit %}
-
-    {{ resultados|load_charts:"cht, chtT"}}
-    <div class="center-block" style="width:900px; height:400px;" id="cht">tensao</div>
-    <div class="center-block" style="width:900px; height:400px;"id="chtT">consumo</div>
+</section>
 
 {% endblock %}
