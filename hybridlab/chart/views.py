@@ -36,6 +36,8 @@ def resultados(request, SimuId):
             chart_options =
               {'title': {
               	'text': 'Dados da Tensao da Simulacao Realizada'},
+                'colors': ['#3AA6D0'],
+                'chart': {'backgroundColor': '#FFFFFF'},
                'xAxis': {
                     'title': {
                        'text': 'Time'}}})
@@ -62,8 +64,10 @@ def resultados(request, SimuId):
             chart_options =
               {'title': {
                 'text': 'Dados do Consumo da Simulacao Realizada'},
+                'colors': ['#3AA6D0'],
+                'chart': {'backgroundColor': '#FFFFFF'},
                'xAxis': {
                     'title': {
                        'text': 'Time'}}})
 
-        return render_to_response('resultados.html',{'resultados' : [cht, chtT],})
+        return render_to_response('resultados.html',{'resultados' : [cht, chtT], 'simulation': simulation})

@@ -2,16 +2,20 @@
 {% extends 'base.html' %}
 
 {% block 'content' %}
-<style>
+	<style>
       body {
         padding-top: 200px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
 
+    <h1>Simulacao {{simulation.id}}</h1>
+
+
+
     {% load chartit %}
 
     {{ resultados|load_charts:"cht, chtT"}}
-    <div id="cht">lala</div>
-    <div id="chtT">lala</div>
+    <div class="center-block" style="width:900px; height:400px;" id="cht">tensao</div>
+    <div class="center-block" style="width:900px; height:400px;"id="chtT">consumo</div>
 
 {% endblock %}
