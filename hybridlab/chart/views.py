@@ -35,10 +35,10 @@ def resultados(request, SimuId):
                   'type': 'line',
                   'stacking': False},
                 'terms':{
-                  'tension': [
-                    'time'],
-                    'fuel':[
-                    'time_fuel']
+                  'time': [
+                    'tension'],
+                    'time_fuel':[
+                    'fuel']
                   }}],
             chart_options =
               {'title': {

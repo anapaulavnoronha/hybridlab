@@ -8,8 +8,7 @@
       }
     </style>
 
-
-      {{simulation}}
-      {{simulation.id}}
+    {% load chartit %}
+    <div id="container">{{ resultados|load_charts:"container"}}</div>
 
 {% endblock %}
