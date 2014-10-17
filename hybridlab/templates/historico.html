@@ -13,7 +13,7 @@
     		<th>Data/Hora da Simulação</th>
     	</tr>
 	  		{% for simulation in object_list %}	
-	    	<tr><td>{{ simulation }}</td></tr>
+	    	<tr><td><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation }}</a></td></tr>
 	    	{% endfor %}
     </table>
 

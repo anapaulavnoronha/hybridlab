@@ -4,11 +4,21 @@ from datetime import datetime
 class Simulation(models.Model):
 	id = models.IntegerField(primary_key=True)
 	pub_date = models.DateTimeField('pub date', default=datetime.now)
-	tension = models.CharField(max_length=50)
-	fuel_consumption = models.CharField(max_length=50)
 
 	def __str__(self):
-		return self.pub_date.strftime('%Y-%m-%d %H:%M')
+		return self.pub_date.strftime('%d-%m-%Y %H:%M')
+
+class Tension(models.Model):
+	id = models.IntegerField(primary_key=True)
+	id_simulation = models.ForeignKey(Simulation, db_column='id_simulation')
+	tension = models.IntegerField()
+	time = models.IntegerField()
+
+class Fuel(models.Model):
+	id = models.IntegerField(primary_key=True)
+	id_simulation = models.ForeignKey(Simulation, db_column='id_simulation')
+	fuel = models.IntegerField()
+	time = models.IntegerField()
 
 
 
