@@ -9,6 +9,9 @@
     </style>
 
     {% load chartit %}
-    <div id="container">{{ resultados|load_charts:"container"}}</div>
+
+    {{ resultados|load_charts:"cht, chtT"}}
+    <div id="cht">lala</div>
+    <div id="chtT">lala</div>
 
 {% endblock %}

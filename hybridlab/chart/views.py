@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template import RequestContext, loader
 from django.http import HttpResponse
 from django.views.generic import ListView
@@ -14,36 +14,56 @@ class ListSimulationtView(ListView):
 def resultados(request, SimuId):
 	simulation = Simulation.objects.get(id=SimuId)
 
-	simulationdata = \
+	simulationdataTension = \
         DataPool(
            series=
             [{'options': {
                'source': Tension.objects.filter(id_simulation=simulation)},
               'terms': [
                 'tension',
-                'time']},
-        	{'options': {
-            	'source': Fuel.objects.filter(id_simulation=simulation)},
-          		'terms': [
-            	{'time_fuel': 'time'}, 
-            	'fuel']}
+                'time']}
             ])
         cht = Chart(
-            datasource = simulationdata,
+            datasource = simulationdataTension,
             series_options =
               [{'options':{
                   'type': 'line',
                   'stacking': False},
                 'terms':{
                   'time': [
-                    'tension'],
-                    'time_fuel':[
+                    'tension']
+                  }}],
+            chart_options =
+              {'title': {
+              	'text': 'Dados da Tensao da Simulacao Realizada'},
+               'xAxis': {
+                    'title': {
+                       'text': 'Time'}}})
+
+        simulationdataFuel = \
+        DataPool(
+           series=
+            [{'options': {
+              'source': Fuel.objects.filter(id_simulation=simulation)},
+              'terms': [
+              'time', 
+              'fuel']}
+            ])
+        chtT = Chart(
+            datasource = simulationdataFuel,
+            series_options =
+              [{'options':{
+                  'type': 'line',
+                  'stacking': False},
+                'terms':{
+                  'time': [
                     'fuel']
                   }}],
             chart_options =
               {'title': {
-              	'text': 'Dados da Simulacao Realizada'},
+                'text': 'Dados do Consumo da Simulacao Realizada'},
                'xAxis': {
                     'title': {
                        'text': 'Time'}}})
-        return render_to_response('resultados.html',{'resultados': cht})
+
+        return render_to_response('resultados.html',{'resultados' : [cht, chtT],})
