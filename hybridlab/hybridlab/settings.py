@@ -37,9 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'login',
     'chartit',
     'chart',
+    # 'django_nose',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -93,3 +93,10 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "templates"),
 )
 
+# TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# NOSE_ARGS = [
+#     '--with-coverage',
+#     '--cover-html',
+#     '--cover-package=core,chart',
+# ]
