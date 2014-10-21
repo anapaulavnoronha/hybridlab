@@ -24,7 +24,7 @@ class ResultadosViewTest(TestCase):
 		response = client.get(reverse('resultados', args = [s.id]))
 		self.failUnlessEqual(response.status_code, 200)
 
-	def test_template_simulation(self):
+	def test_template_resultados(self):
 		client = Client()
 		Simulation.objects.create();
 		s = Simulation.objects.get(id=1)
