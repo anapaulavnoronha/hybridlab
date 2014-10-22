@@ -2,8 +2,12 @@ from django.db import models
 from datetime import datetime 
 # Create your models here.
 class Simulation(models.Model):
+
 	id = models.IntegerField(primary_key=True)
 	pub_date = models.DateTimeField('pub date', default=datetime.now)
+	angulation = models.IntegerField()
+	speed = models.IntegerField()
+	power = models.IntegerField()
 
 	def __str__(self):
 		return self.pub_date.strftime('%d-%m-%Y %H:%M')
