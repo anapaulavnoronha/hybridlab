@@ -19,14 +19,21 @@ class ListSimulationViewTest(TestCase):
 class ResultadosViewTest(TestCase):
 	def test_response_resultados(self):
 		client = Client()
-		Simulation.objects.create();
+		Simulation.objects.create()
 		s = Simulation.objects.get(id=1)
 		response = client.get(reverse('resultados', args = [s.id]))
 		self.failUnlessEqual(response.status_code, 200)
 
 	def test_template_resultados(self):
 		client = Client()
-		Simulation.objects.create();
+		Simulation.objects.create()
 		s = Simulation.objects.get(id=1)
 		response = client.get(reverse('resultados', args = [s.id]))
 		self.assertTemplateUsed(response.status_code, 'resultados.html', 'base.html')
+
+class SimulationModelTest(TestCase):
+	def test_simulation_exists(self):
+		client = Client()
+		Simulation.objects.create()
+		s = Simulation.objects.get(id=1)
+		self.assertEqual(s.id, 1)
