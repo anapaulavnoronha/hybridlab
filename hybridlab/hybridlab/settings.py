@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'core',
     'chartit',
     'chart',
+    'bandit',
     # 'django_nose',
 )
 
@@ -50,12 +51,15 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
+
 )
 
 ROOT_URLCONF = 'hybridlab.urls'
 
 WSGI_APPLICATION = 'hybridlab.wsgi.application'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+BANDIT_EMAIL = 'leandrovelosorodrigues@gmail.com'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
