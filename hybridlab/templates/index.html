@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-text">
-                        <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/logo_vetor.png"%}" alt="" height="800" width="800">
+                        <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/logo_vetor.png"%}" alt="" height="600" width="600">
                         <hr class="star-light">
                         <span class="skills">Bancada de Simulação de Motor Híbridor</span>
                     </div>
@@ -39,127 +39,143 @@
         </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
-    <section class="success" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Áreas de Integração</h2>
+        <!-- Portfolio Grid Section -->
+<script type="text/javascript">
+    jQuery.fn.toggleText = function(a,b) {
+    return   this.html(this.html().replace(new RegExp("("+a+"|"+b+")"),function(x){return(x==a)?b:a;}));
+    }
+
+    //Engenharia Automotiva--> 
+    $(document).ready(function(){
+    $('.tgl1').before('<span><div id="integracao_automotiva"></div><div class="col-sm-1 portfolio-item"></div><div class="col-sm-2 portfolio-item"><a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_automotiva.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Automotiva</h4></div></div></span>');
+    $('.tgl1').css('display', 'none')
+    $('span', '#box-toggle').click(function() {
+    $(this).next().slideToggle('slow')
+    .siblings('.tgl:invisible').slideToggle('fast');
+    // aqui começa o funcionamento do plugin
+
+    $(this).toggleText('Revelar','Esconder')
+    .siblings('span').next('.tgl:visible').prev()
+    .toggleText('Revelar','Esconder')
+    });
+    })
+
+    //Engenharia de Software--> 
+    $(document).ready(function(){
+    $('.tgl2').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_software" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_software.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;Software</h4></div></div></span>');
+    $('.tgl2').css('display', 'none')
+    $('span', '#box-toggle').click(function() {
+    $(this).next().slideToggle('slow')
+    .siblings('.tgl:visible').slideToggle('fast');
+    // aqui começa o funcionamento do plugin
+
+    $(this).toggleText('Revelar','Esconder')
+    .siblings('span').next('.tgl:visible').prev()
+    .toggleText('Revelar','Esconder')
+    });
+    })
+
+
+      //Engenharia de Energia--> 
+    $(document).ready(function(){
+    $('.tgl3').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_energia" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_energia.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-justify"><h4 >Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;&nbsp;&nbsp;Energia</h4></div></div></span>');
+    $('.tgl3').css('display', 'none')
+    $('span', '#box-toggle').click(function() {
+    $(this).next().slideToggle('slow')
+    .siblings('.tgl:visible').slideToggle('fast');
+    // aqui começa o funcionamento do plugin
+
+    $(this).toggleText('Revelar','Esconder')
+    .siblings('span').next('.tgl:visible').prev()
+    .toggleText('Revelar','Esconder')
+    });
+    })
+
+
+    //Engenharia Eletronica--> 
+    $(document).ready(function(){
+    $('.tgl4').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Eletrônica</h4></div></div></span>');
+    $('.tgl4').css('display', 'none')
+    $('span', '#box-toggle').click(function() {
+    $(this).next().slideToggle('slow')
+    .siblings('.tgl:visible').slideToggle('fast');
+    // aqui começa o funcionamento do plugin
+
+    $(this).toggleText('Revelar','Esconder')
+    .siblings('span').next('.tgl:visible').prev()
+    .toggleText('Revelar','Esconder')
+    });
+    })
+
+
+    //Engenharia Aerospacial--> 
+    $(document).ready(function(){
+    $('.tgl5').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_aeroespacial.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>&nbsp;&nbsp;Engenharia Aeroespacial</h4></div></div></span>');
+    $('.tgl5').css('display', 'none')
+    $('span', '#box-toggle').click(function() {
+    $(this).next().slideToggle('slow')
+    .siblings('.tgl:visible').slideToggle('fast');
+    // aqui começa o funcionamento do plugin
+
+
+    $(this).toggleText('Revelar','Esconder')
+    .siblings('span').next('.tgl:visible').prev()
+    .toggleText('Revelar','Esconder')
+    });
+    })
+
+</script>
+
+<section class="success" id="portfolio">
+    <div id="container" class="container">
+        <div class="row">
+            
+            <div class="col-lg-12 text-center">
+                <h2>Áreas de Integração</h2>
                     <hr class="star-light">
-                </div>
             </div>
-                <div class="row">
-                    <div id="integracao_automotiva"></div>
-                    <div class="col-sm-1 portfolio-item">
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_automotiva.png"%}" alt="" height="200" width="200">
-                        </a>
-                        <div class="col-md-2 text-center">
-                        <h4>Engenharia Automotiva</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_software.png"%}" alt="" height="200" width="200">
-                        </a>
-                        <div class="col-md-2 text-center">
-                        <h4>Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;Software</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_energia.png"%}" alt="" height="200" width="200">
-                        </a>
-                        <div class="col-md-2 text-justify">
-                        <h4 >Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;&nbsp;&nbsp;Energia</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="200" width="200">
-                        </a>
-                        <div class="col-md-2 text-center">
-                        <h4>Engenharia Eletrônica</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
-                            <div class="caption">
-                                <div class="caption-content">
-                                    <i class="fa fa-search-plus fa-3x"></i>
-                                </div>
-                            </div>
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_aeroespacial.png"%}" alt="" height="200" width="200">
-                        </a>
-                        <div class="col-md-2 text-center">
-                        <h4>&nbsp;&nbsp;Engenharia Aeroespacial</h4>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 portfolio-item">
+
+            <div id="box-toggle">
+            
+                <div class="tgl1">
+                    <div id="integracao_software"class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia Automotiva</b> </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.or.</p>
+                        <hr>
                     </div>
                 </div>
-
-
-
-                <div id="integracao_software"class="col-lg-8 col-lg-offset-2"> <h4> <b>Engenharia Automotiva</b> </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <hr>
+ 
+                <div class="tgl2">
+                    <div id="integracao_energia" class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia de Software</b> </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <hr>
+                    </div>
                 </div>
                 
-                <div id="integracao_energia" class="col-lg-8 col-lg-offset-2"> <h4> <b>Engenharia de Software</b> </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <hr>
+                <div class="tgl3">
+                    <div id="integracao_eletronica" class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia de Energia</b> </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                        <hr>
+                    </div>
                 </div>
-    
-                <div id="integracao_eletronica" class="col-lg-8 col-lg-offset-2"> <h4> <b>Engenharia de Energia</b> </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <hr>
+
+                <div class="tgl4">
+                    <div id="integracao_aeroespacial" class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia Eletrônica</b> </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+                        <hr>
+                    </div>
                 </div>
-    
-                <div id="integracao_aeroespacial" class="col-lg-8 col-lg-offset-2"> <h4> <b>Engenharia Eletrônica</b> </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <hr>
-                </div>
-    
-                <div class="col-lg-8 col-lg-offset-2"> <h4> <b>Engenharia Aeroespacial</b> </h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.
-                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-                </p>
-                <hr>
+
+                <div class="tgl5">
+                    <div class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia Aeroespacial</b> </h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
+                        </p>
+                        <hr>
+                    </div>
                 </div>
             </div>
-    </section>
-
+     </div> <!--fecha a row-->  
+ </div>
+</section>  
 
     <!-- Team Section -->
     <section class="primary" id="about">
@@ -175,43 +191,43 @@
                     <div class="col-sm-1 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/alysson.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/alysson.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Alysson Raniere</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alysson<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Raniere</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/ana.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/ana.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>&nbsp;Ana&nbsp;Paula<br>&nbsp;&nbsp;&nbsp;Vargas</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;Ana&nbsp;Paula<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vargas</h5>
 
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/breno.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/breno.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
-                        <h5>&nbsp;&nbsp;Breno <br>&nbsp;&nbsp;Prince</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Breno <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Prince</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/jessica.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/jessica.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Jessica &nbsp;&nbsp;Souza</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jessica &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Souza</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lais.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lais.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Laís Lima</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Laís<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lima</h5>
                         </div>
                     </div>
                     <div class="col-sm-1 portfolio-item">
@@ -222,42 +238,42 @@
                     <div class="col-sm-1 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lana.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lana.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>&nbsp;&nbsp;Lana Beatriz</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lana<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Beatriz</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/leandro.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/leandro.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Leandro &nbsp;&nbsp;Veloso</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;Leandro<br>&nbsp;&nbsp;&nbsp;&nbsp;Veloso</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lucas.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lucas.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
-                        <h5>&nbsp;&nbsp;&nbsp;Lucas Carneiro</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lucas<br>&nbsp;&nbsp;&nbsp;&nbsp;Carneiro</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/mariele.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/mariele.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Marielle &nbsp;&nbsp;Santos</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Marielle<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Santos</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/paulo.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/paulo.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;Paulo Guilherme</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Paulo<br>&nbsp;&nbsp;&nbsp;Guilherme</h5>
                         </div>
                     </div>
                     <div class="col-sm-1 portfolio-item">
@@ -269,42 +285,42 @@
                     <div class="col-sm-1 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/tatiane.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/tatiane.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>&nbsp;&nbsp;&nbsp;Tatiane Rodrigues</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tatiane<br>&nbsp;&nbsp;&nbsp;&nbsp;Rodrigues</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/wanessa.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/wanessa.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Wanessa Christina</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;Wanessa<br>&nbsp;&nbsp;&nbsp;&nbsp;Christina</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/william.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/william.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
-                        <h5>William Macedo</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;William<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macedo</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Sylvia &nbsp;Faria</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sylvia<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Faria</h5>
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
                         <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/iago.png"%}" alt="" height="200" width="200">
+                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/iago.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
-                        <h5>Yago Regis</h5>
+                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Yago<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regis</h5>
                         </div>
                     </div>
                     <div class="col-sm-1 portfolio-item">
@@ -313,7 +329,6 @@
 
         </div>       
     </section>
-
 
 {% endblock %}
 
