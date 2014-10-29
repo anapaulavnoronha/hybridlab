@@ -37,9 +37,12 @@ class SimulationModelTest(TestCase):
 		Simulation.objects.create(angulation=7, speed=80, power=35)
 		s = Simulation.objects.get(id=1)
 		self.assertEqual(s.id, 1)
-		self.assertEqual(s.angulation, 7)
-		self.assertEqual(s.speed, 80)
-		self.assertEqual(s.power, 35)
+
+	def test_simulation_exists_one(self):
+		client = Client()
+		Simulation.objects.create(angulation=7, speed=80, power=35)
+		s = Simulation.objects.get(id=1)
+		self.assertEqual(Simulation.objects.count(), 1)
 
 	def test_simulation_angulation(self):
 		client = Client()
