@@ -11,7 +11,7 @@
                     <div class="intro-text">
                         <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/logo_vetor.png"%}" alt="" height="600" width="600">
                         <hr class="star-light">
-                        <span class="skills">Bancada de Simulação de Motor Híbridor</span>
+                        <span class="skills">Bancada de Simulação de Motor Híbrido</span>
                     </div>
                 </div>
             </div>
@@ -29,11 +29,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-                </div>
-                <div class="col-lg-4">
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+                <div class="col-lg-8 col-lg-offset-2 text-justify">
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HybridLab é um projeto desenvolvido na Universidade de Brasília (UnB) - Faculdade do Gama, pelos alunos da disciplina Projeto Integrador 2. Sua proposta consiste em criar uma bancada, que simule a utilização de motores elétrico e à combustão, com intuito de oferecer suporte para a aquisição de conhecimentos sobre o comportamento do sistema em uma dada configuração.</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A aplicação disponibiliza o histórico com os resultados obtidos das simulações realizadas na bancada, apresentando gráficos sobre variações na corrente, consumo e potência do ensaio escolhido.</p>
                 </div>
             </div>
         </div>
@@ -47,7 +45,7 @@
 
     //Engenharia Automotiva--> 
     $(document).ready(function(){
-    $('.tgl1').before('<span><div id="integracao_automotiva"></div><div class="col-sm-1 portfolio-item"></div><div class="col-sm-2 portfolio-item"><a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_automotiva.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Automotiva</h4></div></div></span>');
+    $('.tgl1').before('<span><div id="integracao_automotiva"></div><div class="col-sm-1 portfolio-item"></div><div class="col-sm-2 portfolio-item"><a href="#integracao_automotiva" class="portfolio-link" ><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_automotiva.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Automotiva</h4></div></div></span>');
     $('.tgl1').css('display', 'none')
     $('span', '#box-toggle').click(function() {
     $(this).next().slideToggle('slow')
@@ -62,7 +60,7 @@
 
     //Engenharia de Software--> 
     $(document).ready(function(){
-    $('.tgl2').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_software" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_software.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;Software</h4></div></div></span>');
+    $('.tgl2').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_software" class="portfolio-link" ><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_software.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;Software</h4></div></div></span>');
     $('.tgl2').css('display', 'none')
     $('span', '#box-toggle').click(function() {
     $(this).next().slideToggle('slow')
@@ -78,7 +76,7 @@
 
       //Engenharia de Energia--> 
     $(document).ready(function(){
-    $('.tgl3').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_energia" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_energia.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-justify"><h4 >Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;&nbsp;&nbsp;Energia</h4></div></div></span>');
+    $('.tgl3').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_energia" class="portfolio-link" ><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_energia.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-justify"><h4 >Engenharia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de &nbsp;&nbsp;&nbsp;&nbsp;Energia</h4></div></div></span>');
     $('.tgl3').css('display', 'none')
     $('span', '#box-toggle').click(function() {
     $(this).next().slideToggle('slow')
@@ -94,7 +92,7 @@
 
     //Engenharia Eletronica--> 
     $(document).ready(function(){
-    $('.tgl4').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Eletrônica</h4></div></div></span>');
+    $('.tgl4').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_eletronica" class="portfolio-link" ><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>Engenharia Eletrônica</h4></div></div></span>');
     $('.tgl4').css('display', 'none')
     $('span', '#box-toggle').click(function() {
     $(this).next().slideToggle('slow')
@@ -110,7 +108,7 @@
 
     //Engenharia Aerospacial--> 
     $(document).ready(function(){
-    $('.tgl5').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal"><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_aeroespacial.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>&nbsp;&nbsp;Engenharia Aeroespacial</h4></div></div></span>');
+    $('.tgl5').before('<span><div class="col-sm-2 portfolio-item"><a href="#integracao_aeroespacial" class="portfolio-link" ><div class="caption"><div class="caption-content"><i class="fa fa-search-plus fa-3x"></i></div></div><img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_aeroespacial.png"%}" alt="" height="200" width="200"></a><div class="col-md-2 text-center"><h4>&nbsp;&nbsp;Engenharia Aeroespacial</h4></div></div></span>');
     $('.tgl5').css('display', 'none')
     $('span', '#box-toggle').click(function() {
     $(this).next().slideToggle('slow')
@@ -146,7 +144,7 @@
  
                 <div class="tgl2">
                     <div id="integracao_energia" class="col-lg-10 col-lg-offset-1"> <h4> <b>Engenharia de Software</b> </h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                        <p>A equipe de Software buscou apresentar, através de dois sistemas, os resultados pelas sistemas. Através de uma aplicação online.</p>
                         <hr>
                     </div>
                 </div>
@@ -190,7 +188,7 @@
                     <div id="integracao_automotiva"></div>
                     <div class="col-sm-1 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/alysson.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -198,7 +196,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/ana.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -207,7 +205,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/breno.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
@@ -215,7 +213,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/jessica.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -223,7 +221,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lais.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -237,7 +235,7 @@
                     <div id="integracao_automotiva"></div>
                     <div class="col-sm-1 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lana.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -245,7 +243,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/leandro.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -253,7 +251,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/lucas.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
@@ -261,7 +259,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/mariele.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -269,7 +267,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/paulo.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -282,17 +280,9 @@
 
                 <div class="row">
                     <div id="integracao_automotiva"></div>
-                    <div class="col-sm-1 portfolio-item"></div>
+                    <div class="col-sm-2 portfolio-item"></div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_automotiva" class="portfolio-link" data-toggle="modal">
-                             <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/tatiane.png"%}" alt="" height="150" width="150">
-                        </a>
-                        <div class="col-md-2 text-center">
-                        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tatiane<br>&nbsp;&nbsp;&nbsp;&nbsp;Rodrigues</h5>
-                        </div>
-                    </div>
-                    <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_software" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/wanessa.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -300,7 +290,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_energia" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/william.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-justify">
@@ -308,7 +298,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_eletronica" class="portfolio-link" data-toggle="modal">
+                        <a class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/icone_eletronica.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
@@ -316,7 +306,7 @@
                         </div>
                     </div>
                     <div class="col-sm-2 portfolio-item">
-                        <a href="#integracao_aeroespacial" class="portfolio-link" data-toggle="modal">
+                        <a  class="portfolio-link" data-toggle="modal">
                              <img class="img-responsive" src="{% static "core/bootstrap-3.2.0-dist/img/iago.png"%}" alt="" height="150" width="150">
                         </a>
                         <div class="col-md-2 text-center">
