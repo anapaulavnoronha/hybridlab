@@ -104,3 +104,5 @@ TEMPLATE_DIRS = (
 #     '--cover-html',
 #     '--cover-package=core,chart',
 # ]
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
