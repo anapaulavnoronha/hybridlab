@@ -58,8 +58,8 @@ ROOT_URLCONF = 'hybridlab.urls'
 
 WSGI_APPLICATION = 'hybridlab.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-BANDIT_EMAIL = 'leandrovelosorodrigues@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# BANDIT_EMAIL = 'leandrovelosorodrigues@gmail.com'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -105,4 +105,13 @@ TEMPLATE_DIRS = (
 #     '--cover-package=core,chart',
 # ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'hybridlab.fga@gmail.com'
+EMAIL_HOST_PASSWORD = 'hybrid123'
+DEFAULT_FROM_EMAIL = 'hybridlab.fga@gmail.com'
+DEFAULT_TO_EMAIL = 'hybridlab.fga@gmail.com'
+SERVER_EMAIL = 'hybridlab.fga@gmail.com'
