@@ -18,9 +18,9 @@ def resultados(request, SimuId):
         DataPool(
            series=
             [{'options': {
-               'source': Tension.objects.filter(id_simulation=simulation)},
+               'source': Current.objects.filter(id_simulation=simulation)},
               'terms': [
-                'tension',
+                'current',
                 'time']}
             ])
         cht = Chart(
@@ -31,16 +31,19 @@ def resultados(request, SimuId):
                   'stacking': False},
                 'terms':{
                   'time': [
-                    'tension']
+                    'current']
                   }}],
             chart_options =
               {'title': {
-              	'text': 'Dados da Tensao da Simulacao Realizada'},
+              	'text': 'Grafico de Corrente x Tempo'},
                 'colors': ['#3AA6D0'],
                 'chart': {'backgroundColor': '#DAEEF2'},
                'xAxis': {
                     'title': {
-                       'text': 'Time'}}})
+                       'text': 'Tempo (s)'}},
+                'yAxis': {
+                    'title': {
+                       'text': 'Corrente (A)'}}})
 
         simulationdataFuel = \
         DataPool(
@@ -63,11 +66,14 @@ def resultados(request, SimuId):
                   }}],
             chart_options =
               {'title': {
-                'text': 'Dados do Consumo da Simulacao Realizada'},
+                'text': 'Grafico de Consumo(l/s) x Tempo(s)'},
                 'colors': ['#3AA6D0'],
                 'chart': {'backgroundColor': '#DAEEF2'},
                'xAxis': {
                     'title': {
-                       'text': 'Time'}}})
+                       'text': 'Tempo (s)'}},
+                'yAxis': {
+                    'title': {
+                       'text': 'Consumo (l/s)'}}})
 
         return render_to_response('resultados.html',{'resultados' : [cht, chtT], 'simulation': simulation})
