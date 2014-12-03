@@ -23,18 +23,18 @@
           <thead>
           <tr>
             <th>Data/Hora da Simulação</th>
-            <th>Angulação</th>
-            <th>Velocidade</th>
-            <th>Potência</th>
+            <th>Angulação(º)</th>
+            <th>Perda de Potência(%)</th>
+            <th>Modelo do Carro</th>
           </tr>
           </thead>
            <tbody class="searchable">
             {% for simulation in object_list %} 
             <tr>
               <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation }}</a></td>
-              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.angulation }}º</a></td>
-              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.speed }} km/h</a></td>
-              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.power }}</a></td>
+              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.inclination }}º</a></td>
+              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.powerLoss }}%</a></td>
+              <td align="left"><a href ="./{{simulation.id}}"  style="text-decoration:none">{{ simulation.id_car.carModel }}</a></td>
             </tr>
             {% endfor %}
             </tbody>
