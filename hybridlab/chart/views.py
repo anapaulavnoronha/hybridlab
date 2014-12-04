@@ -14,24 +14,24 @@ class ListSimulationtView(ListView):
 def resultados(request, SimuId):
 	simulation = Simulation.objects.get(id=SimuId)
 
-	simulationdataTension = \
+	simulationdataCurrent = \
         DataPool(
            series=
             [{'options': {
-               'source': Current.objects.filter(id_simulation=simulation)},
+               'source': Current.objects.filter(fk_simulation_id=simulation)},
               'terms': [
-                'current',
+                'value',
                 'time']}
             ])
         cht = Chart(
-            datasource = simulationdataTension,
+            datasource = simulationdataCurrent,
             series_options =
               [{'options':{
                   'type': 'line',
                   'stacking': False},
                 'terms':{
                   'time': [
-                    'current']
+                    'value']
                   }}],
             chart_options =
               {'title': {
@@ -45,24 +45,24 @@ def resultados(request, SimuId):
                     'title': {
                        'text': 'Corrente (A)'}}})
 
-        simulationdataFuel = \
+        simulationdataConsumption = \
         DataPool(
            series=
             [{'options': {
-              'source': Fuel.objects.filter(id_simulation=simulation)},
+              'source': Consumption.objects.filter(fk_simulation_id=simulation)},
               'terms': [
               'time', 
-              'fuel']}
+              'value']}
             ])
         chtT = Chart(
-            datasource = simulationdataFuel,
+            datasource = simulationdataConsumption,
             series_options =
               [{'options':{
                   'type': 'line',
                   'stacking': False},
                 'terms':{
                   'time': [
-                    'fuel']
+                    'value']
                   }}],
             chart_options =
               {'title': {
